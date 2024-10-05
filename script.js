@@ -10,10 +10,11 @@ const getCurrentTime = () => {
     const hour = currentTime.getHours();
     const minutes = currentTime.getMinutes();
 
-    console.log(`${hour}:${minutes}`)
+    hourElement.innerHTML = hour;
+    minutesElement.innerHTML = minutes;
 }
 
-const btn_mark = document.querySelector('btn_mark');
+const btn_mark = document.querySelector('.btn_mark');
 
 btn_mark.addEventListener('click', () => {
     getCurrentTime();
