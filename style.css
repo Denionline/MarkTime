@@ -14,6 +14,8 @@ body{
     flex-direction: column;
 
     font: 1rem Roboto, sans-serif;
+
+    max-width: 414px;
 }
 
 button{
