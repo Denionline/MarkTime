@@ -14,8 +14,6 @@ body{
     flex-direction: column;
 
     font: 1rem Roboto, sans-serif;
-
-    max-width: 414px;
 }
 
 button{
@@ -35,6 +33,8 @@ button{
     background: #B5BCCC;
 
     padding: 3rem 1rem;
+
+    z-index: 4;
 }
 
 .body .date_time {
@@ -66,9 +66,11 @@ button{
     justify-content: space-between;
     align-items: center;
 
-    padding: 0.5rem 2rem;
+    padding: 1rem 2rem;
 
     background: #202126;
+
+    z-index: 10;
 }
 
 .menu_bar button {
@@ -79,3 +81,69 @@ button{
 .menu_bar .history {
     cursor: not-allowed;
 }
+
+.history_page{
+    position: absolute;
+
+    top: 0;
+    right: -50%;
+
+    transform: translate(-50%, 0);
+
+    background: #B5BCCC;
+    
+    height: 100%;
+    width: 100%;
+    padding: 2rem 0.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+
+    /* opacity: 1;
+    z-index: 5; */
+
+    opacity: 1;
+    z-index: -1;
+}
+
+.history_page.opened{
+    opacity: 1;
+    z-index: 5;
+}
+
+.history_page h2{
+    width: 90%;
+    margin-bottom: 1rem;
+}
+
+.history_page table{
+    
+    width: 90%;   
+}
+
+.history_page table tr th,
+.history_page table tr td{
+    background: #879ed4;
+    padding: 0.5rem 0;
+    text-align: center;
+}
+
+.history_page table tr th:first-child{
+    border-top-left-radius: 8px;
+}
+.history_page table tr th:last-child{
+    border-top-right-radius: 8px;
+}
+
+.history_page table tr:last-child td:first-child{
+    border-bottom-left-radius: 8px;
+}
+.history_page table tr:last-child td:last-child{
+    border-bottom-right-radius: 8px;
+}
+
+/* .history_page table tr td{
+
+} */
